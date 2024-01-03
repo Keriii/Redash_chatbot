@@ -3,6 +3,7 @@
 # Ignore Python virtual environment
 venv/
 env/
+youtube-data/
 # Ignore compiled Python files
 *.pyc
 __pycache__/
@@ -52,3 +53,5 @@ coverage.xml
 
 # Ignore Jupyter Notebook checkpoints
 .ipynb_checkpoints/
+db_loader.ipynb
+db_credential.txt
