@@ -1,5 +1,8 @@
 # .gitignore
 
+# Ignore the youtube_data
+youtube_data/
+*.csv
 # Ignore Python virtual environment
 venv/
 env/
