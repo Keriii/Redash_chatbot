@@ -1,0 +1,47 @@
+version: '3'
+services:
+  server:
+    image: redash/redash:latest
+    restart: always
+    ports:
+      - "5000:5000"
+    depends_on:
+      - postgres
+    environment:
+      REDASH_LOG_LEVEL: "INFO"
+      REDASH_REDIS_URL: "redis://redis:6379/0"
+      REDASH_DATABASE_URL: "postgresql://postgres:Dan2024@postgres:5432/redash"
+
+  scheduler:
+    image: redash/redash:latest
+    restart: always
+    depends_on:
+      - server
+    environment:
+      QUEUES: "scheduled_queries,schemas"
+      REDASH_LOG_LEVEL: "INFO"
+      REDASH_REDIS_URL: "redis://redis:6379/0"
+      REDASH_DATABASE_URL: "postgresql://postgres:Dan2024@postgres:5432/redash"
+
+  worker:
+    image: redash/redash:latest
+    restart: always
+    depends_on:
+      - server
+    environment:
+      QUEUES: "celery"
+      REDASH_LOG_LEVEL: "INFO"
+      REDASH_REDIS_URL: "redis://redis:6379/0"
+      REDASH_DATABASE_URL: "postgresql://postgres:Dan2024@postgres:5432/redash"
+
+  postgres:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Dan2024
+      POSTGRES_DB: redash
+
+  redis:
+    image: redis:latest
+    restart: always
