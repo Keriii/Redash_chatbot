@@ -68,7 +68,7 @@ $ npm install --global yarn@1.22.19
 ## Clone the Redash source code and install the NodeJS dependencies
 
 ```
-$ git clone https://github.com/Keriii/Redash_chatbot.git
+$ git clone https://github.com/getredash/redash
 $ cd redash
 $ yarn
 ```
@@ -92,7 +92,13 @@ $ make env
 
 Redash uses [GNU Make](https://www.gnu.org/software/make/) to run things, so if you're not sure about something it's often a good idea to take a look over the [Makefile](https://github.com/getredash/redash/blob/master/Makefile) which can help. :smile:
 
+# Plig-in the add-on
 
+1. Copy the `chat` folder entirely `client/app/components/chat` to the corresponding place in redash's `client/app/components` folder
+2. Copy the `chat.py` file entirely `redash/handlers/chat.py` to the corresponding place in redash's `redash/handlers` folder
+3. copy the `chat.js` file entierly `client/app/service/chat.js` to  the corresponding palce in redash's `client/app/services` folder
+4. Replace the `api.py` file entirely `redash/handlers/api.py` with the corrosponsing file in redash's `redash/handlers/api.py` file
+5. Replace the `index.js` file entierly `client/app/components/ApplicationArea/ApplicationLayout/index.jsx` with the corresponding fine in redash.
 ## Build the Redash front end
 
 ```
