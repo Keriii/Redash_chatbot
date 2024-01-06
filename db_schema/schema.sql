@@ -1,3 +1,4 @@
+
 /*lets create a query that can accpet future youtube datas and store them in the database*/
 
 /*Cities*/
@@ -239,3 +240,4 @@ CREATE TABLE IF NOT EXISTS Viwership_by_date_Table_data (
     "Average view duration" TEXT,
     PRIMARY KEY ("Date")
 );
+
