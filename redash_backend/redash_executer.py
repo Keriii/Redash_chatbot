@@ -1,5 +1,6 @@
 import os
 import json
+import dotenv
 import asyncio
 from flask import Flask, jsonify
 from redash_python import Redash
@@ -8,7 +9,7 @@ app = Flask(__name__)
 
 class RedashQueryExecutor:
     def __init__(self, base_url, api_key):
-        self.rd = Redash(base_url=base_url, api_key=api_key) #use api generated from redash
+        self.rd = Redash(base_url=base_url, api_key=os.getenv("REDASH_API_KEY")) #use api generated from redash
 
     async def execute_query_from_file(self, query_name, file_path):
         # Check if the file exists
