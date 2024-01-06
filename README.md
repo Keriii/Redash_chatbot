@@ -1,7 +1,7 @@
 # Redash Back-end Handler
-# Welcome to the project!
+## Welcome to the project!
 
-## What you'll find here:
+### What you'll find here:
 
 - Tools to work with YouTube metadata
 - A way to create cool charts and visuals from youtube-metadata to (Redash)
@@ -34,4 +34,6 @@ Now you can explore the data and create awesome visualizations with Redash. And 
 ```bash
     localhost:5000/execute_queries
     localhost:5000/generate_response(user_prompt)
-    ```
+
+## License
+This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
