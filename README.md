@@ -1,6 +1,6 @@
-# Redash addon plugin for youtube data
+# Redash Back-end Handler
 
-# Installation
+# Usage
 
 ```bash
--- todo--
+pip install redash-python
