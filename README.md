@@ -31,9 +31,8 @@
 ## FINALLY
 
 Now you can explore the data and create awesome visualizations with Redash. And you can ask questions about the data using OpenAI. and call the api using 
-```bash
-    localhost:5000/execute_queries
-    localhost:5000/generate_response(user_prompt)
+- `localhost:5000/execute_queries`
+- `localhost:5000/generate_response(user_prompt)`
 
 ## License
 This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
