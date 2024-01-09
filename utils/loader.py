@@ -27,7 +27,7 @@ class LoadCSVToDatabase:
                 if filename.endswith('.csv'):
                     csv_path = os.path.join(dirpath, filename)
                     parent_folder = os.path.basename(dirpath)
-                    table_name = f'{parent_folder}_{os.path.splitext(filename)[0]}' # Use 'parentfolder_filename' as table name to avoid confusion in our db
+                    table_name = f'{parent_folder}_{os.path.splitext(filename)[0]}' # Use 'parentfolder_filename' as table name to avoid confusion in our db table
 
                     data = pd.read_csv(csv_path)
                     data.to_sql(table_name, engine, if_exists='replace', index=False)

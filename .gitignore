@@ -2,11 +2,11 @@
 
 # Ignore the youtube_data
 youtube_data/
+youtube-data/
 *.csv
 # Ignore Python virtual environment
 venv/
 env/
-youtube-data/
 # Ignore compiled Python files
 *.pyc
 __pycache__/
